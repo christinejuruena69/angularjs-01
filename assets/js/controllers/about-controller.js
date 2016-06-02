@@ -4,9 +4,9 @@
 
 	angular.module('main')
 			
-			.controller("AboutCtrl", AboutCtrl);
+			.controller('AboutCtrl', AboutCtrl);
 
-			AboutCtrl.$inject = ["$scope"];
+			AboutCtrl.$inject = ['$scope'];
 
 
 			

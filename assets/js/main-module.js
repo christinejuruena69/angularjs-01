@@ -2,7 +2,7 @@
 
 	'use strict';
 
-	angular.module('main', ['ngMaterial', 'ui.router'])
+	angular.module('main', ['ngMaterial', 'ui.router','uiRouterStyles', 'firebase'])
 
 			
 			.config(config);
@@ -45,7 +45,14 @@
 					                controller: 'AboutCtrl'
 					            }
 				       		}
-			        	});
+			        	})
+			        	.state('todo', {
+				           url: '/todo',
+				       		data: { css: ['assets/css/todo.css']},
+						    templateUrl: 'todo.html',
+				        	controller: 'TodoCtrl'
+            				
+          				});
 		    }
 		    // function MainCtrl($scope){
 		    // 	$scope.characters =[

@@ -1,0 +1,61 @@
+div.todo {
+  margin-top: 70px;
+  width: 100%;
+  padding: 0;
+}
+
+md-content.md-default-theme,
+md-content {
+  background-color: rgba(163, 160, 160, 0.45);
+}
+
+.carddemoBasicUsage .card-media {
+  background-color: #999999;
+}
+
+md-card > h2 {
+  padding-left: 15px;
+}
+
+.note {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+p.good {
+  line-height: 30px;
+  padding-left: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+  background-color: rgba(0, 128, 0, 0.31);
+}
+
+p.warn {
+  line-height: 30px;
+  padding-left: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+  background-color: rgba(204, 2, 5, 0.31);
+}
+
+
+
+/*STUFF*/
+
+.colorsdemoBasicUsage .card-media {
+  margin-right: 16px;
+  border-radius: 50%;
+  overflow: hidden; }
+.colorsdemoBasicUsage .md-subhead.description {
+  color: rgba(255, 255, 255, 0.7); }
+.colorsdemoBasicUsage .card-media md-icon {
+  width: 40px;
+  height: 40px;
+  color: rgba(255, 255, 255, 0.87); }
+.colorsdemoBasicUsage span.card-title {
+  padding-left: 15px;
+  margin-top: 20px; }
+.colorsdemoBasicUsage code.css {
+  background-color: #fffcc2; }
+.colorsdemoBasicUsage p.footnote code {
+  font-size: 0.85em; }
