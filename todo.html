@@ -1,60 +1,61 @@
 <div ng-cloak class="todo">
 
-  <md-content class="md-padding">
+    <md-content class="md-padding">
     <div layout="column" layout-gt-xs="row" layout-xs="row">
-      
-      <md-card flex>
+        
+        <md-card flex>
         <md-card-content>
         <form name="projectForm">
-        <div layout="row" >
-          <md-input-container flex>
-            <label>Note title</label>
-            <input md-maxlength="30" required md-no-asterisk name="todo" ng-model="todo">
-            <div ng-messages="projectForm.description.$error">
-              <div ng-message="required">This is required.</div>
-              <div ng-message="md-maxlength">The title needs to be less than 30 characters long.</div>
+            <div layout="row" >
+                <md-input-container flex>
+                <label>Note title</label>
+                <input md-maxlength="50" required md-no-asterisk name="todo" ng-model="todo">
+                <div ng-messages="projectForm.description.$error">
+                    <div ng-message="required">This is required.</div>
+                    <div ng-message="md-maxlength">The title needs to be less than 50 characters long.</div>
+                </div>
+                </md-input-container>
             </div>
-
-          </md-input-container>
-
-         </div>
-         	<md-button class="md-primary md-raised" ng-click="addNote()" layout-align="center center">Add</md-button>
-        	    </form>
+            <md-button class="md-primary md-raised" ng-click="addNote()" layout-align="center center">Add</md-button>
+        </form>
         </md-card-content>
-      </md-card>
+        </md-card>
     </div>
-  </md-content>
+    </md-content>
 
-
-  <md-content class="md-padding">
-    <div layout="row" layout-xs="row">
-      <md-card ng-repeat="note in messages"flex flex-gt-xs="40">
-        <md-card-title>
-              <md-card-title-text>
-                <span class="md-headline" contenteditable="true" ng-model="noteTitle" ng-click="enableEdit()">{{note.todo}}</span>
-<!--                 <p contenteditable="true" ng-model="noteText" ng-click="enableEdit()">{{note.text}}</p>
- -->              </md-card-title-text>
-              <md-card-title-media>
-                <div class="md-media-lg card-media"></div>
-              </md-card-title-media>
-            </md-card-title>
-            <md-card-actions layout="row" layout-align="end center">
-            <md-switch ng-model="note.completed" aria-label="Switch 1" ng-click="toggle(note)">
-            </md-switch>
-            <md-button class="md-raised" ng-model="saveButton" ng-click="editTodo($event, note)">Edit Title</md-button>
-            <!-- <md-button class="md-raised" ng-model="saveButton" ng-click="editText($event, note)">Edit Text</md-button> -->
-            <md-button class="md-raised md-primary" ng-click="delete(note)">TODO DONE</md-button>
-            </md-card-actions>
-      </md-card>
-      <!-- <md-card flex>
-        <h2>Card title #2</h2>
-        <md-card-content>
-          <p>Some content</p>
-        </md-card-content>
-      </md-card> -->
-    </div>
-  </md-content>
-
-  
-
+    <md-content class="md-padding cards-div" layout-sm="column">
+        <div layout="row" layout-gt-xs="row" ayout-sm="column" layout-xs="column" class="" layout-wrap>
+            <div ng-repeat="note in messages" >
+                <md-card flex="33">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline" contenteditable="true" ng-model="noteTitle" ng-click="enableEdit()">{{note.todo}}</span>
+                            <!--                 <p contenteditable="true" ng-model="noteText" ng-click="enableEdit()">{{note.text}}</p>
+                            -->              </md-card-title-text>
+                            <md-card-title-media>
+                                <div class="md-media-lg card-media"></div>
+                            </md-card-title-media>
+                    </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-switch ng-model="note.completed" aria-label="Switch 1" ng-click="toggle(note)"></md-switch>
+                    <md-button class="md-fab md-primary md-mini" aria-label="Done" ng-model="saveButton" ng-click="editTodo($event, note)">
+                        <md-icon > <i class="material-icons">edit</i></md-icon>
+                    </md-button>
+                    <md-button class="md-fab md-mini" aria-label="Done" ng-click="delete(note)">
+                        <md-icon > <i class="material-icons">check</i></md-icon>
+                    </md-button>
+                
+                </md-card-actions>
+                </md-card>
+            </div>
+        </div>
+            <!-- <md-card flex>
+            <h2>Card title #2</h2>
+            <md-card-content>
+            <p>Some content</p>
+            </md-card-content>
+            </md-card> -->
+        
+    </md-content>
+    
 </div>
